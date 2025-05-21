@@ -1,0 +1,57 @@
+<!-- admin.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin View</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pVJxQ+QyyoxAAGeOw9nBj4CxPqak7u0O2aGSMfR7oy0AkK5Z7YlC7FkVtUMK+uXvE4mIdVZc3lE1Y8lZbS3xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e6f0fa;
+      color: #012650;
+      padding: 20px;
+      animation: fadeIn 1s ease-in;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #012650;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    th {
+      background-color: #012650;
+      color: #fff;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h2><i class="fas fa-user-shield"></i> Admin View</h2>
+  <table>
+    <tr><th>Name</th><th>Reg No</th><th>Department</th><th>Level</th></tr>
+    <tr><td>ISHAQ HADI</td><td>17/47298Ut18/5</td><td>MIT</td><td>500</td></tr>
+    <tr><td>BENJAMIN VICTOR</td><td>20/59771U/5</td><td>MIT</td><td>300</td></tr>
+    <tr><td>OGWUCHE EMMANUEL</td><td>21/64624U/1</td><td>MICROBIOLOGY</td><td>300</td></tr>
+  </table>
+</body>
+</html>

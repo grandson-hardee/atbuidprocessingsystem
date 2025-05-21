@@ -1,0 +1,147 @@
+<!-- register.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register Student</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pVJxQ+QyyoxAAGeOw9nBj4CxPqak7u0O2aGSMfR7oy0AkK5Z7YlC7FkVtUMK+uXvE4mIdVZc3lE1Y8lZbS3xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root {
+      --blue: #012650;
+      --light-blue: #e6f0fa;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light-blue);
+      color: var(--blue);
+      padding: 20px;
+      animation: fadeIn 1s ease-in;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    header img {
+      width: 50px;
+    }
+
+    header h2 {
+      font-size: 1.6rem;
+      color: var(--blue);
+    }
+
+    form {
+      background-color: var(--white);
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+      margin: 0 auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      animation: slideUp 1s ease-out;
+    }
+
+    form p {
+      margin-bottom: 15px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: var(--blue);
+      color: var(--white);
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0059b3;
+    }
+
+    #photoPreview {
+      margin-top: 10px;
+      display: block;
+      max-width: 100px;
+      border-radius: 5px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/atbulogo.jpeg" alt="ATBU Logo">
+    <h2><i class="fas fa-user-plus icon"></i>Student Registration</h2>
+  </header>
+
+  <form id="registerForm">
+    <p>
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" required />
+    </p>
+    <p>
+      <label for="reg">Reg No:</label>
+      <input type="text" id="reg" required />
+    </p>
+    <p>
+      <label for="dept">Department:</label>
+      <input type="text" id="dept" required />
+    </p>
+    <p>
+      <label for="level">Level:</label>
+      <input type="text" id="level" required />
+    </p>
+    <p>
+      <label for="photo">Upload Passport:</label>
+      <input type="file" id="photo" accept="image/*" onchange="previewImage(event)" required />
+    </p>
+    <p><img id="photoPreview" style="display:none;" /></p>
+    <button type="button" onclick="saveData()"><i class="fas fa-eye icon"></i>Preview ID Card</button>
+  </form>
+
+  <script>
+    function previewImage(event) {
+      const photo = document.getElementById("photoPreview");
+      photo.src = URL.createObjectURL(event.target.files[0]);
+      photo.style.display = "block";
+    }
+  </script>
+  <script src="js/script.js"></script>
+</body>
+</html>

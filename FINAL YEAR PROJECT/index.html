@@ -1,0 +1,135 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATBU Student ID Card System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pVJxQ+QyyoxAAGeOw9nBj4CxPqak7u0O2aGSMfR7oy0AkK5Z7YlC7FkVtUMK+uXvE4mIdVZc3lE1Y8lZbS3xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root {
+      --blue: #012650;
+      --light-blue: #e6f0fa;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light-blue);
+      color: var(--blue);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      background-color: var(--blue);
+      color: var(--white);
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      animation: slideDown 1s ease-out;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+      font-size: 1.8rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s, transform 0.2s;
+    }
+
+    nav a:hover {
+      color: #87cefa;
+      transform: scale(1.1);
+    }
+
+    main {
+      flex: 1;
+      padding: 30px 20px;
+      text-align: center;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    main p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+    }
+
+    img {
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      animation: zoomIn 1.5s ease;
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .icon {
+      margin-right: 5px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.4rem;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      main p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><i class="fas fa-id-badge icon"></i>ATBU Student ID Card Processing System</h1>
+    <nav>
+      <a href="register.html"><i class="fas fa-user-plus icon"></i>Register</a>
+      <a href="preview.html"><i class="fas fa-id-card icon"></i>ID Preview</a>
+      <a href="admin.html"><i class="fas fa-user-shield icon"></i>Admin View</a>
+    </nav>
+  </header>
+  <main>
+    <p>Welcome to the student ID card processing system. Use the links above to navigate.</p>
+    <img src="images/download.jpg" alt="ATBU Senate Building">
+  </main>
+</body>
+</html>
